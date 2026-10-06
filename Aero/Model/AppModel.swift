@@ -75,10 +75,6 @@ final class AppModel: ObservableObject {
     }
 
     func resetAppearance() {
-        var fresh = AeroSettings()
-        fresh.wallpaperEnabled = settings.wallpaperEnabled
-        fresh.displayTarget = settings.displayTarget
-        fresh.showInDock = settings.showInDock
-        settings = fresh
+        settings.resetAppearance()
     }
 }

@@ -156,6 +156,35 @@ struct AeroSettings: Codable, Equatable {
 
     private static let key = "settings.v1"
 
+    /// Restore the clock's appearance without changing app or feature preferences.
+    mutating func resetAppearance() {
+        let defaults = AeroSettings()
+        style = defaults.style
+        layout = defaults.layout
+        foregroundHex = defaults.foregroundHex
+        backgroundHex = defaults.backgroundHex
+        backgroundOpacity = defaults.backgroundOpacity
+        brightness = defaults.brightness
+        use24Hour = defaults.use24Hour
+        showSeconds = defaults.showSeconds
+        blinkColon = defaults.blinkColon
+        showDate = defaults.showDate
+        dateFormat = defaults.dateFormat
+        caption = defaults.caption
+        scale = defaults.scale
+        anchor = defaults.anchor
+        dotShape = defaults.dotShape
+        dotFill = defaults.dotFill
+        ghost = defaults.ghost
+        glow = defaults.glow
+        flapTypeface = defaults.flapTypeface
+        flapAnimation = defaults.flapAnimation
+        mapDetail = defaults.mapDetail
+        mapDaylight = defaults.mapDaylight
+        mapLabels = defaults.mapLabels
+        cities = defaults.cities
+    }
+
     static func load() -> AeroSettings {
         guard let data = UserDefaults.standard.data(forKey: key) else { return AeroSettings() }
         if let settings = try? JSONDecoder().decode(AeroSettings.self, from: data) { return settings }
