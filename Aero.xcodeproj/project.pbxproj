@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		348FD2E4C300480F8DCF3785 /* MenuBarPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D702AC8E8B2491393F73752 /* MenuBarPanel.swift */; };
 		03343B299299084C474934CE /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65087693C84CABF96F0C8B7C /* AppModel.swift */; };
 		55FE63B5BDE259D8426F71FB /* WorldMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032936A3EEA065086355C804 /* WorldMap.swift */; };
 		5E4B6B6A4A3AA04CC4D7CB3A /* PixelFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3048DB15365C86441982CB /* PixelFont.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D702AC8E8B2491393F73752 /* MenuBarPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarPanel.swift; sourceTree = "<group>"; };
 		032936A3EEA065086355C804 /* WorldMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldMap.swift; sourceTree = "<group>"; };
 		0AE33D1A3F6AB330AF2FD1DB /* UsageMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageMonitor.swift; sourceTree = "<group>"; };
 		36839B90998A7F35ABA10A9C /* Controls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controls.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				36839B90998A7F35ABA10A9C /* Controls.swift */,
 				7B65684AB284C6A9E6CF67AB /* MainView.swift */,
+				3D702AC8E8B2491393F73752 /* MenuBarPanel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				348FD2E4C300480F8DCF3785 /* MenuBarPanel.swift in Sources */,
 				9A325973482F0B0EAEDF1B9C /* AeroApp.swift in Sources */,
 				03343B299299084C474934CE /* AppModel.swift in Sources */,
 				DFA25AA20CF268BB180C0619 /* Cities.swift in Sources */,

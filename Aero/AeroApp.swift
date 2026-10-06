@@ -36,6 +36,7 @@ struct AeroApp: App {
         } label: {
             MenuBarLabel(pomodoro: model.pomodoro)
         }
+        .menuBarExtraStyle(.window)
     }
 }
 
@@ -172,38 +173,5 @@ private struct FocusCommands: View {
         Button("Reset Timer", action: pomodoro.reset)
             .keyboardShortcut("r", modifiers: [.command, .option])
             .disabled(!pomodoro.state.isActive)
-    }
-}
-
-private struct MenuBarContent: View {
-    @EnvironmentObject private var model: AppModel
-    @ObservedObject private var usage = AppModel.shared.usage
-    @Environment(\.openWindow) private var openWindow
-
-    var body: some View {
-        Text("Pomodoro")
-        FocusCommands(pomodoro: model.pomodoro)
-        PomodoroSettingsButton()
-        Divider()
-        ClockCommands()
-        if !usage.snapshot.providers.isEmpty {
-            Divider()
-            ForEach(UsageProvider.allCases) { provider in
-                if let info = usage.snapshot.providers[provider] {
-                    Text(provider.title + ": " + info.windows.map {
-                        "\(Int(($0.remaining * 100).rounded()))% left (\($0.label.lowercased()))"
-                    }.joined(separator: ", "))
-                }
-            }
-        }
-        Divider()
-        Button("Open Aero") {
-            openWindow(id: "main")
-            NSApp.activate(ignoringOtherApps: true)
-        }
-        SettingsLink { Text("Settings…") }
-        Divider()
-        Button("Quit Aero") { NSApp.terminate(nil) }
-            .keyboardShortcut("q")
     }
 }
