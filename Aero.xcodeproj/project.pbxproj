@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03343B299299084C474934CE /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65087693C84CABF96F0C8B7C /* AppModel.swift */; };
+		55FE63B5BDE259D8426F71FB /* WorldMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032936A3EEA065086355C804 /* WorldMap.swift */; };
+		5E4B6B6A4A3AA04CC4D7CB3A /* PixelFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3048DB15365C86441982CB /* PixelFont.swift */; };
+		73CFD99D747D0CA3AA3A9D0A /* Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36839B90998A7F35ABA10A9C /* Controls.swift */; };
+		795D17ED355072536165D9B8 /* ClockFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781F89FE62DCA6BCCC5CBE42 /* ClockFaceView.swift */; };
+		7A600EC0C02568D70ED52668 /* ClockRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E270A68175AC7659F0B2ABC /* ClockRenderer.swift */; };
+		7E2926EBF90AD7ECF4E3ABEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98FF3FA8FC57FD7C2CF03AE4 /* Assets.xcassets */; };
+		8788FA198B00AADD5F1FBD64 /* Pomodoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF37CE87BDE89EE31F8097F5 /* Pomodoro.swift */; };
+		8BE4B3F7342861DC9FA37EBF /* ClockScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D5AB7E854DF88A34876FE /* ClockScene.swift */; };
+		913A3C2E738F3A83E6BD999E /* UsageMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE33D1A3F6AB330AF2FD1DB /* UsageMonitor.swift */; };
+		9A325973482F0B0EAEDF1B9C /* AeroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68878CA9C08342B5E1546D0 /* AeroApp.swift */; };
+		B1E1C88C774447F11C28316A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65684AB284C6A9E6CF67AB /* MainView.swift */; };
+		B359E912FA7C18186B39274F /* FlapRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90B13B665DBE23D47E3493 /* FlapRenderer.swift */; };
+		CB857E46DBFE2D52053DB88C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C43C73D73B7CFFC5DD5C39 /* Settings.swift */; };
+		DFA25AA20CF268BB180C0619 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F54967F40EA96048955C11 /* Cities.swift */; };
+		F5D6EA681F06BC5BE3D2EFE9 /* WallpaperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBFBC8DCA29299B2A77651 /* WallpaperController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		032936A3EEA065086355C804 /* WorldMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldMap.swift; sourceTree = "<group>"; };
+		0AE33D1A3F6AB330AF2FD1DB /* UsageMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageMonitor.swift; sourceTree = "<group>"; };
+		36839B90998A7F35ABA10A9C /* Controls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controls.swift; sourceTree = "<group>"; };
+		3E270A68175AC7659F0B2ABC /* ClockRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockRenderer.swift; sourceTree = "<group>"; };
+		4E1D5AB7E854DF88A34876FE /* ClockScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockScene.swift; sourceTree = "<group>"; };
+		4E9F49DB97319684A894847D /* Aero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aero.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		56F54967F40EA96048955C11 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
+		58C43C73D73B7CFFC5DD5C39 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		65087693C84CABF96F0C8B7C /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		781F89FE62DCA6BCCC5CBE42 /* ClockFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockFaceView.swift; sourceTree = "<group>"; };
+		7A3048DB15365C86441982CB /* PixelFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelFont.swift; sourceTree = "<group>"; };
+		7B65684AB284C6A9E6CF67AB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7D90B13B665DBE23D47E3493 /* FlapRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlapRenderer.swift; sourceTree = "<group>"; };
+		86BBFBC8DCA29299B2A77651 /* WallpaperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperController.swift; sourceTree = "<group>"; };
+		98FF3FA8FC57FD7C2CF03AE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B68878CA9C08342B5E1546D0 /* AeroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroApp.swift; sourceTree = "<group>"; };
+		FF37CE87BDE89EE31F8097F5 /* Pomodoro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pomodoro.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0A2AB18E3BB702F16BB69A78 /* Aero */ = {
+			isa = PBXGroup;
+			children = (
+				B68878CA9C08342B5E1546D0 /* AeroApp.swift */,
+				98FF3FA8FC57FD7C2CF03AE4 /* Assets.xcassets */,
+				B4DF3FD53B0D48A84763136A /* Model */,
+				F5601D8A821199A3BD18AF68 /* Render */,
+				A9BD885758C4D95FB2CA5FA0 /* UI */,
+				507D94BB7BF584EF101659C7 /* Wallpaper */,
+			);
+			path = Aero;
+			sourceTree = "<group>";
+		};
+		507D94BB7BF584EF101659C7 /* Wallpaper */ = {
+			isa = PBXGroup;
+			children = (
+				86BBFBC8DCA29299B2A77651 /* WallpaperController.swift */,
+			);
+			path = Wallpaper;
+			sourceTree = "<group>";
+		};
+		98595F99CCC106EA678517D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E9F49DB97319684A894847D /* Aero.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9BD885758C4D95FB2CA5FA0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				36839B90998A7F35ABA10A9C /* Controls.swift */,
+				7B65684AB284C6A9E6CF67AB /* MainView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B1F8AA05F5BC40E0230669D7 = {
+			isa = PBXGroup;
+			children = (
+				0A2AB18E3BB702F16BB69A78 /* Aero */,
+				98595F99CCC106EA678517D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B4DF3FD53B0D48A84763136A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				65087693C84CABF96F0C8B7C /* AppModel.swift */,
+				56F54967F40EA96048955C11 /* Cities.swift */,
+				FF37CE87BDE89EE31F8097F5 /* Pomodoro.swift */,
+				58C43C73D73B7CFFC5DD5C39 /* Settings.swift */,
+				0AE33D1A3F6AB330AF2FD1DB /* UsageMonitor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F5601D8A821199A3BD18AF68 /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				781F89FE62DCA6BCCC5CBE42 /* ClockFaceView.swift */,
+				3E270A68175AC7659F0B2ABC /* ClockRenderer.swift */,
+				4E1D5AB7E854DF88A34876FE /* ClockScene.swift */,
+				7D90B13B665DBE23D47E3493 /* FlapRenderer.swift */,
+				7A3048DB15365C86441982CB /* PixelFont.swift */,
+				032936A3EEA065086355C804 /* WorldMap.swift */,
+			);
+			path = Render;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDE5B82D4311FE47AB1A094E /* Aero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FBBEEB5A6978C77D3A6F41C /* Build configuration list for PBXNativeTarget "Aero" */;
+			buildPhases = (
+				358DA05FF1DE67B51E66E41A /* Sources */,
+				659925DE0B386505637D083F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Aero;
+			packageProductDependencies = (
+			);
+			productName = Aero;
+			productReference = 4E9F49DB97319684A894847D /* Aero.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21A2738778364061899C4996 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					EDE5B82D4311FE47AB1A094E = {
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 9619BCAD6089D0A5979EF3E9 /* Build configuration list for PBXProject "Aero" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = B1F8AA05F5BC40E0230669D7;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 98595F99CCC106EA678517D2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDE5B82D4311FE47AB1A094E /* Aero */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		659925DE0B386505637D083F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E2926EBF90AD7ECF4E3ABEA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		358DA05FF1DE67B51E66E41A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A325973482F0B0EAEDF1B9C /* AeroApp.swift in Sources */,
+				03343B299299084C474934CE /* AppModel.swift in Sources */,
+				DFA25AA20CF268BB180C0619 /* Cities.swift in Sources */,
+				795D17ED355072536165D9B8 /* ClockFaceView.swift in Sources */,
+				7A600EC0C02568D70ED52668 /* ClockRenderer.swift in Sources */,
+				8BE4B3F7342861DC9FA37EBF /* ClockScene.swift in Sources */,
+				73CFD99D747D0CA3AA3A9D0A /* Controls.swift in Sources */,
+				B359E912FA7C18186B39274F /* FlapRenderer.swift in Sources */,
+				B1E1C88C774447F11C28316A /* MainView.swift in Sources */,
+				5E4B6B6A4A3AA04CC4D7CB3A /* PixelFont.swift in Sources */,
+				8788FA198B00AADD5F1FBD64 /* Pomodoro.swift in Sources */,
+				CB857E46DBFE2D52053DB88C /* Settings.swift in Sources */,
+				913A3C2E738F3A83E6BD999E /* UsageMonitor.swift in Sources */,
+				F5D6EA681F06BC5BE3D2EFE9 /* WallpaperController.swift in Sources */,
+				55FE63B5BDE259D8426F71FB /* WorldMap.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		30DEB3EBA5AACA1AB6AB7CB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Aero;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bryllim.aero;
+				PRODUCT_NAME = Aero;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		91A3E1AC0E86B3E468A1DF8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B05A54D56AA64E7213660D4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ED691A997AE88B1BE2265761 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Aero;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bryllim.aero;
+				PRODUCT_NAME = Aero;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FBBEEB5A6978C77D3A6F41C /* Build configuration list for PBXNativeTarget "Aero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30DEB3EBA5AACA1AB6AB7CB2 /* Debug */,
+				ED691A997AE88B1BE2265761 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9619BCAD6089D0A5979EF3E9 /* Build configuration list for PBXProject "Aero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B05A54D56AA64E7213660D4B /* Debug */,
+				91A3E1AC0E86B3E468A1DF8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 21A2738778364061899C4996 /* Project object */;
+}

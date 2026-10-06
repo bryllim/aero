@@ -1,0 +1,16 @@
+.DS_Store
+/build/
+/dist/
+/Aero.app/
+DerivedData/
+*.dmg
+*.zip
+*.xcuserstate
+xcuserdata/
+.env
+.env.*
+*.p12
+*.mobileprovision
+*.provisionprofile
+*.pem
+*.key
