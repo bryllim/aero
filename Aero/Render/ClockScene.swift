@@ -7,6 +7,7 @@ struct FaceInput: Equatable {
     /// Full length of the current pomodoro phase, for the progress bar.
     var focusLength: TimeInterval = 25 * 60
     var usage = UsageSnapshot()
+    var system = SystemSnapshot()
 }
 
 /// One row of the display: text plus its size relative to the main time row.
@@ -16,6 +17,7 @@ struct SceneLine: Equatable {
         case map
         /// A dotted progress bar, filled to the given fraction.
         case bar(Double)
+        case systemStats(SystemSnapshot)
     }
 
     var text: String
@@ -78,6 +80,11 @@ enum ClockScene {
                                      weight: 0.26, gapAfter: 0.1))
                 out.append(SceneLine(text: "", weight: 0.05, kind: .bar(primary.remaining), gapAfter: 0.1))
             }
+        }
+
+        if settings.systemStatsEnabled {
+            out[out.count - 1].gapAfter = 0.3
+            out.append(SceneLine(text: "", weight: 0.95, kind: .systemStats(input.system), gapAfter: 0.2))
         }
 
         if settings.layout == .map {

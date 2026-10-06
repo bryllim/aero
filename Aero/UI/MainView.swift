@@ -37,7 +37,7 @@ private struct PreviewPane: View {
             VStack(spacing: 20) {
                 FocusCard(pomodoro: model.pomodoro)
 
-                LiveFace(model: model, pomodoro: model.pomodoro, usage: model.usage)
+                LiveFace(model: model, pomodoro: model.pomodoro, usage: model.usage, systemMonitor: model.systemMonitor)
                     .aspectRatio(screenSize.width / screenSize.height, contentMode: .fit)
                     .background {
                         // What shows through when the background is see-through.
@@ -226,6 +226,7 @@ private struct WallpaperInspector: View {
 
     var body: some View {
         Form {
+            SystemMonitorSettingsSection()
             Section("Display") {
                 Picker("Style", selection: $model.settings.style) {
                     ForEach(DisplayStyle.allCases) { Text($0.title).tag($0) }
@@ -409,6 +410,9 @@ struct SettingsView: View {
             GeneralSettings()
                 .tabItem { Label("General", systemImage: "gearshape") }
                 .tag(SettingsTab.general)
+            SystemMonitorSettings()
+                .tabItem { Label("System", systemImage: "cpu") }
+                .tag(SettingsTab.system)
             UsageSettings()
                 .tabItem { Label("AI Usage", systemImage: "chart.bar.xaxis") }
                 .tag(SettingsTab.usage)

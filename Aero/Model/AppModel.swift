@@ -3,7 +3,7 @@ import Combine
 import ServiceManagement
 
 enum SettingsTab: Hashable {
-    case pomodoro, general, usage
+    case pomodoro, general, system, usage
 }
 
 @MainActor
@@ -18,6 +18,7 @@ final class AppModel: ObservableObject {
             guard settings != oldValue else { return }
             settings.save()
             if settings.showInDock != oldValue.showInDock { applyDockPolicy() }
+            systemMonitor.configure(enabled: settings.systemStatsEnabled)
         }
     }
 
@@ -25,12 +26,14 @@ final class AppModel: ObservableObject {
 
     private(set) var pomodoro: PomodoroTimer!
     let usage = UsageMonitor()
+    let systemMonitor = SystemMonitor()
     private var cancellables: Set<AnyCancellable> = []
 
     private init() {
         settings = AeroSettings.load()
         pomodoro = PomodoroTimer { [unowned self] in self.settings }
         usage.configure(settings: settings)
+        systemMonitor.configure(enabled: settings.systemStatsEnabled)
         $settings
             .map { ($0.usageClaude, $0.usageCodex, $0.usageClaudeRefresh) }
             .removeDuplicates { $0 == $1 }
@@ -46,7 +49,8 @@ final class AppModel: ObservableObject {
     /// Everything the clock face needs to draw itself.
     var faceInput: FaceInput {
         FaceInput(settings: settings, pomodoro: pomodoro.state,
-                  focusLength: pomodoro.length(of: pomodoro.state.phase), usage: usage.snapshot)
+                  focusLength: pomodoro.length(of: pomodoro.state.phase), usage: usage.snapshot,
+                  system: systemMonitor.snapshot)
     }
 
     func setLaunchAtLogin(_ enabled: Bool) {

@@ -17,6 +17,7 @@ enum ClockRenderer {
             switch frame.line.kind {
             case .map: MapRenderer.draw(&context, in: frame.rect, settings: settings, date: date)
             case .bar(let progress): drawBar(&context, in: frame.rect, progress: progress, settings: settings)
+            case .systemStats(let snapshot): SystemStatsRenderer.draw(&context, in: frame.rect, snapshot: snapshot, settings: settings)
             case .text: break
             }
         }
@@ -74,6 +75,7 @@ enum ClockRenderer {
             case .text: line.weight * widthUnits(line.text, style: settings.style)
             case .map: line.weight * WorldMap.aspect
             case .bar: line.weight * 30
+            case .systemStats: line.weight * CGFloat(SystemStatsRenderer.metricCount(settings)) * 2.5
             }
         }
         let maxWidth = widths.max() ?? 1

@@ -89,7 +89,8 @@ private struct WallpaperView: View {
     @ObservedObject var visibility: WindowVisibility
 
     var body: some View {
-        LiveFace(model: model, pomodoro: model.pomodoro, usage: model.usage, visible: visibility.isVisible)
+        LiveFace(model: model, pomodoro: model.pomodoro, usage: model.usage,
+                 systemMonitor: model.systemMonitor, visible: visibility.isVisible)
             .ignoresSafeArea()
     }
 }
@@ -99,6 +100,7 @@ struct LiveFace: View {
     @ObservedObject var model: AppModel
     @ObservedObject var pomodoro: PomodoroTimer
     @ObservedObject var usage: UsageMonitor
+    @ObservedObject var systemMonitor: SystemMonitor
     var visible = true
 
     var body: some View {

@@ -138,6 +138,15 @@ struct AeroSettings: Codable, Equatable {
     var pomodoroNotifications = true
     var showPomodoroOnWallpaper = true
 
+    var showSystemStatsOnWallpaper = false
+    var systemStatsCPU = true
+    var systemStatsMemory = true
+    var systemStatsSwap = false
+
+    var systemStatsEnabled: Bool {
+        showSystemStatsOnWallpaper && (systemStatsCPU || systemStatsMemory || systemStatsSwap)
+    }
+
     var usageClaude = false
     var usageClaudeRefresh = false
     var usageCodex = false

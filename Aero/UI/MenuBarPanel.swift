@@ -197,6 +197,7 @@ private struct PomodoroMenuTransport: View {
 
 private struct MenuBarWallpaperControls: View {
     @EnvironmentObject private var model: AppModel
+    @Environment(\.openSettings) private var openSettings
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -212,6 +213,26 @@ private struct MenuBarWallpaperControls: View {
             }
 
             Divider()
+
+            HStack {
+                Label("System Stats", systemImage: "cpu")
+                    .font(.callout)
+                Spacer()
+                Toggle("Show system stats on the wallpaper", isOn: $model.settings.showSystemStatsOnWallpaper)
+                    .labelsHidden()
+                    .toggleStyle(.switch)
+                    .controlSize(.small)
+                Button {
+                    model.settingsTab = .system
+                    openSettings()
+                } label: {
+                    Label("System Monitor Settings", systemImage: "gearshape")
+                        .labelStyle(.iconOnly)
+                        .foregroundStyle(.secondary)
+                }
+                .buttonStyle(.plain)
+                .help("Choose CPU, RAM and swap metrics")
+            }
 
             HStack {
                 Picker("Style", selection: $model.settings.style) {

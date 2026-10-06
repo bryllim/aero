@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8F7A56651624BFABF8A6FBB /* SystemMonitorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8DA737862641BE91680962 /* SystemMonitorSettings.swift */; };
+		BA8E4397EF1640F48F9C538D /* SystemStatsRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF3267B4A64777AEB25040 /* SystemStatsRenderer.swift */; };
+		F6658FCA3FA74BAEA2CA858A /* SystemMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A128876E547BB9EBC54BC /* SystemMonitor.swift */; };
 		348FD2E4C300480F8DCF3785 /* MenuBarPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D702AC8E8B2491393F73752 /* MenuBarPanel.swift */; };
 		03343B299299084C474934CE /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65087693C84CABF96F0C8B7C /* AppModel.swift */; };
 		55FE63B5BDE259D8426F71FB /* WorldMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032936A3EEA065086355C804 /* WorldMap.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C8DA737862641BE91680962 /* SystemMonitorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitorSettings.swift; sourceTree = "<group>"; };
+		4EEF3267B4A64777AEB25040 /* SystemStatsRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStatsRenderer.swift; sourceTree = "<group>"; };
+		374A128876E547BB9EBC54BC /* SystemMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitor.swift; sourceTree = "<group>"; };
 		3D702AC8E8B2491393F73752 /* MenuBarPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarPanel.swift; sourceTree = "<group>"; };
 		032936A3EEA065086355C804 /* WorldMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldMap.swift; sourceTree = "<group>"; };
 		0AE33D1A3F6AB330AF2FD1DB /* UsageMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageMonitor.swift; sourceTree = "<group>"; };
@@ -83,6 +89,7 @@
 				36839B90998A7F35ABA10A9C /* Controls.swift */,
 				7B65684AB284C6A9E6CF67AB /* MainView.swift */,
 				3D702AC8E8B2491393F73752 /* MenuBarPanel.swift */,
+				7C8DA737862641BE91680962 /* SystemMonitorSettings.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -99,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				65087693C84CABF96F0C8B7C /* AppModel.swift */,
+				374A128876E547BB9EBC54BC /* SystemMonitor.swift */,
 				56F54967F40EA96048955C11 /* Cities.swift */,
 				FF37CE87BDE89EE31F8097F5 /* Pomodoro.swift */,
 				58C43C73D73B7CFFC5DD5C39 /* Settings.swift */,
@@ -112,6 +120,7 @@
 			children = (
 				781F89FE62DCA6BCCC5CBE42 /* ClockFaceView.swift */,
 				3E270A68175AC7659F0B2ABC /* ClockRenderer.swift */,
+				4EEF3267B4A64777AEB25040 /* SystemStatsRenderer.swift */,
 				4E1D5AB7E854DF88A34876FE /* ClockScene.swift */,
 				7D90B13B665DBE23D47E3493 /* FlapRenderer.swift */,
 				7A3048DB15365C86441982CB /* PixelFont.swift */,
@@ -190,6 +199,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8F7A56651624BFABF8A6FBB /* SystemMonitorSettings.swift in Sources */,
+				BA8E4397EF1640F48F9C538D /* SystemStatsRenderer.swift in Sources */,
+				F6658FCA3FA74BAEA2CA858A /* SystemMonitor.swift in Sources */,
 				348FD2E4C300480F8DCF3785 /* MenuBarPanel.swift in Sources */,
 				9A325973482F0B0EAEDF1B9C /* AeroApp.swift in Sources */,
 				03343B299299084C474934CE /* AppModel.swift in Sources */,
