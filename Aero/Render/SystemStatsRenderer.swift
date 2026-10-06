@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Small instrument cards, using the wallpaper's existing dot or flap typeface.
+/// Unframed system readings, using the wallpaper's existing dot or flap typeface.
 enum SystemStatsRenderer {
     private struct Metric {
         var label: String
@@ -18,13 +18,8 @@ enum SystemStatsRenderer {
         guard !metrics.isEmpty else { return }
         let gap = rect.height * 0.12
         let width = (rect.width - gap * CGFloat(metrics.count - 1)) / CGFloat(metrics.count)
-        let foreground = Color(hex: settings.foregroundHex)
-
         for (index, metric) in metrics.enumerated() {
             let card = CGRect(x: rect.minX + CGFloat(index) * (width + gap), y: rect.minY, width: width, height: rect.height)
-            let shape = Path(roundedRect: card, cornerRadius: card.height * 0.09)
-            context.fill(shape, with: .color(foreground.opacity(0.045)))
-            context.stroke(shape, with: .color(foreground.opacity(0.16)), lineWidth: max(0.5, card.height * 0.008))
             let inset = card.height * 0.13
             let contentWidth = card.width - inset * 2
 
