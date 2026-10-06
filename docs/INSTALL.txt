@@ -1,0 +1,20 @@
+Aero
+Developed by Bryl Lim — https://bryllim.com
+
+Requires macOS 14 or later. Supports Apple silicon and Intel Macs.
+
+1. Drag Aero.app to the Applications shortcut in this disk image.
+2. Open Aero from Applications.
+3. Use the Aero menu bar icon for Pomodoro and quick wallpaper controls.
+4. Open Aero's main window to preview and customize the wallpaper.
+
+System Stats is optional. Enable it in the menu bar dropdown and choose
+CPU, RAM, and swap readings in Settings → System.
+
+Check the release notes for signing and notarization status. Preview builds
+may be blocked by macOS when downloaded. You can review the source and
+build the app locally instead.
+
+Source and releases: https://github.com/bryllim/aero
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/

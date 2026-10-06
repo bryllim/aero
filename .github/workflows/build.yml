@@ -1,0 +1,24 @@
+name: Build and check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  macos:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Check settings restoration
+        run: ./scripts/check_settings.sh
+      - name: Check system sampling
+        run: ./scripts/check_system_monitor.sh
+      - name: Build universal Release app
+        run: >-
+          xcodebuild -project Aero.xcodeproj -scheme Aero
+          -configuration Release -derivedDataPath build
+          ARCHS="arm64 x86_64" ONLY_ACTIVE_ARCH=NO build
