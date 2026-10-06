@@ -438,6 +438,10 @@ private struct GeneralSettings: View {
                     ForEach(DisplayTarget.allCases) { Text($0.title).tag($0) }
                 }
             }
+            Section {
+                Link("Developed by Bryl Lim", destination: URL(string: "https://bryllim.com")!)
+                Link("Creative Commons Attribution 4.0", destination: URL(string: "https://creativecommons.org/licenses/by/4.0/")!)
+            }
         }
         .formStyle(.grouped)
     }

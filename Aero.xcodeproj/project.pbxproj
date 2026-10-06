@@ -7,39 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D8F7A56651624BFABF8A6FBB /* SystemMonitorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8DA737862641BE91680962 /* SystemMonitorSettings.swift */; };
-		BA8E4397EF1640F48F9C538D /* SystemStatsRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF3267B4A64777AEB25040 /* SystemStatsRenderer.swift */; };
-		F6658FCA3FA74BAEA2CA858A /* SystemMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374A128876E547BB9EBC54BC /* SystemMonitor.swift */; };
-		348FD2E4C300480F8DCF3785 /* MenuBarPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D702AC8E8B2491393F73752 /* MenuBarPanel.swift */; };
 		03343B299299084C474934CE /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65087693C84CABF96F0C8B7C /* AppModel.swift */; };
+		3D6DB1EB557980A0ADE0DA5A /* SystemStatsRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBC42333D6D5525ABEF4031 /* SystemStatsRenderer.swift */; };
+		424E3FC45B85236A73E73AE7 /* SystemMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD213AA4A2D2F33723C9E6 /* SystemMonitor.swift */; };
+		44ED6B34F34A69B6E0B1D986 /* SystemMonitorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE8042D16A5300D6CBB644E /* SystemMonitorSettings.swift */; };
+		541F1F352CCE6248B593BA19 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2FC6851B27D18D9440290CE0 /* Credits.rtf */; };
 		55FE63B5BDE259D8426F71FB /* WorldMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032936A3EEA065086355C804 /* WorldMap.swift */; };
 		5E4B6B6A4A3AA04CC4D7CB3A /* PixelFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3048DB15365C86441982CB /* PixelFont.swift */; };
 		73CFD99D747D0CA3AA3A9D0A /* Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36839B90998A7F35ABA10A9C /* Controls.swift */; };
 		795D17ED355072536165D9B8 /* ClockFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781F89FE62DCA6BCCC5CBE42 /* ClockFaceView.swift */; };
 		7A600EC0C02568D70ED52668 /* ClockRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E270A68175AC7659F0B2ABC /* ClockRenderer.swift */; };
 		7E2926EBF90AD7ECF4E3ABEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98FF3FA8FC57FD7C2CF03AE4 /* Assets.xcassets */; };
+		86A71970F69BD54CA1285C87 /* MenuBarPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC828997350A91A378E96A4F /* MenuBarPanel.swift */; };
 		8788FA198B00AADD5F1FBD64 /* Pomodoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF37CE87BDE89EE31F8097F5 /* Pomodoro.swift */; };
 		8BE4B3F7342861DC9FA37EBF /* ClockScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1D5AB7E854DF88A34876FE /* ClockScene.swift */; };
 		913A3C2E738F3A83E6BD999E /* UsageMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE33D1A3F6AB330AF2FD1DB /* UsageMonitor.swift */; };
 		9A325973482F0B0EAEDF1B9C /* AeroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68878CA9C08342B5E1546D0 /* AeroApp.swift */; };
+		A2FD8175A431980DF81187A7 /* ATTRIBUTION.md in Resources */ = {isa = PBXBuildFile; fileRef = 0227F86C5DF24B6EA2100625 /* ATTRIBUTION.md */; };
 		B1E1C88C774447F11C28316A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B65684AB284C6A9E6CF67AB /* MainView.swift */; };
 		B359E912FA7C18186B39274F /* FlapRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90B13B665DBE23D47E3493 /* FlapRenderer.swift */; };
+		C3584522546E6725A1016039 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C91ABD05846DB0E1D1C79670 /* LICENSE */; };
 		CB857E46DBFE2D52053DB88C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C43C73D73B7CFFC5DD5C39 /* Settings.swift */; };
 		DFA25AA20CF268BB180C0619 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F54967F40EA96048955C11 /* Cities.swift */; };
 		F5D6EA681F06BC5BE3D2EFE9 /* WallpaperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BBFBC8DCA29299B2A77651 /* WallpaperController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7C8DA737862641BE91680962 /* SystemMonitorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitorSettings.swift; sourceTree = "<group>"; };
-		4EEF3267B4A64777AEB25040 /* SystemStatsRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStatsRenderer.swift; sourceTree = "<group>"; };
-		374A128876E547BB9EBC54BC /* SystemMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitor.swift; sourceTree = "<group>"; };
-		3D702AC8E8B2491393F73752 /* MenuBarPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarPanel.swift; sourceTree = "<group>"; };
+		0227F86C5DF24B6EA2100625 /* ATTRIBUTION.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ATTRIBUTION.md; sourceTree = "<group>"; };
 		032936A3EEA065086355C804 /* WorldMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldMap.swift; sourceTree = "<group>"; };
 		0AE33D1A3F6AB330AF2FD1DB /* UsageMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageMonitor.swift; sourceTree = "<group>"; };
+		2FC6851B27D18D9440290CE0 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		36839B90998A7F35ABA10A9C /* Controls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controls.swift; sourceTree = "<group>"; };
 		3E270A68175AC7659F0B2ABC /* ClockRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockRenderer.swift; sourceTree = "<group>"; };
 		4E1D5AB7E854DF88A34876FE /* ClockScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockScene.swift; sourceTree = "<group>"; };
 		4E9F49DB97319684A894847D /* Aero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aero.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55AD213AA4A2D2F33723C9E6 /* SystemMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitor.swift; sourceTree = "<group>"; };
 		56F54967F40EA96048955C11 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
 		58C43C73D73B7CFFC5DD5C39 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		65087693C84CABF96F0C8B7C /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
@@ -50,6 +52,10 @@
 		86BBFBC8DCA29299B2A77651 /* WallpaperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperController.swift; sourceTree = "<group>"; };
 		98FF3FA8FC57FD7C2CF03AE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B68878CA9C08342B5E1546D0 /* AeroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AeroApp.swift; sourceTree = "<group>"; };
+		BC828997350A91A378E96A4F /* MenuBarPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarPanel.swift; sourceTree = "<group>"; };
+		BEE8042D16A5300D6CBB644E /* SystemMonitorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitorSettings.swift; sourceTree = "<group>"; };
+		C91ABD05846DB0E1D1C79670 /* LICENSE */ = {isa = PBXFileReference; path = LICENSE; sourceTree = "<group>"; };
+		CCBC42333D6D5525ABEF4031 /* SystemStatsRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStatsRenderer.swift; sourceTree = "<group>"; };
 		FF37CE87BDE89EE31F8097F5 /* Pomodoro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pomodoro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +65,7 @@
 			children = (
 				B68878CA9C08342B5E1546D0 /* AeroApp.swift */,
 				98FF3FA8FC57FD7C2CF03AE4 /* Assets.xcassets */,
+				2FC6851B27D18D9440290CE0 /* Credits.rtf */,
 				B4DF3FD53B0D48A84763136A /* Model */,
 				F5601D8A821199A3BD18AF68 /* Render */,
 				A9BD885758C4D95FB2CA5FA0 /* UI */,
@@ -88,8 +95,8 @@
 			children = (
 				36839B90998A7F35ABA10A9C /* Controls.swift */,
 				7B65684AB284C6A9E6CF67AB /* MainView.swift */,
-				3D702AC8E8B2491393F73752 /* MenuBarPanel.swift */,
-				7C8DA737862641BE91680962 /* SystemMonitorSettings.swift */,
+				BC828997350A91A378E96A4F /* MenuBarPanel.swift */,
+				BEE8042D16A5300D6CBB644E /* SystemMonitorSettings.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -97,6 +104,8 @@
 		B1F8AA05F5BC40E0230669D7 = {
 			isa = PBXGroup;
 			children = (
+				0227F86C5DF24B6EA2100625 /* ATTRIBUTION.md */,
+				C91ABD05846DB0E1D1C79670 /* LICENSE */,
 				0A2AB18E3BB702F16BB69A78 /* Aero */,
 				98595F99CCC106EA678517D2 /* Products */,
 			);
@@ -106,10 +115,10 @@
 			isa = PBXGroup;
 			children = (
 				65087693C84CABF96F0C8B7C /* AppModel.swift */,
-				374A128876E547BB9EBC54BC /* SystemMonitor.swift */,
 				56F54967F40EA96048955C11 /* Cities.swift */,
 				FF37CE87BDE89EE31F8097F5 /* Pomodoro.swift */,
 				58C43C73D73B7CFFC5DD5C39 /* Settings.swift */,
+				55AD213AA4A2D2F33723C9E6 /* SystemMonitor.swift */,
 				0AE33D1A3F6AB330AF2FD1DB /* UsageMonitor.swift */,
 			);
 			path = Model;
@@ -120,10 +129,10 @@
 			children = (
 				781F89FE62DCA6BCCC5CBE42 /* ClockFaceView.swift */,
 				3E270A68175AC7659F0B2ABC /* ClockRenderer.swift */,
-				4EEF3267B4A64777AEB25040 /* SystemStatsRenderer.swift */,
 				4E1D5AB7E854DF88A34876FE /* ClockScene.swift */,
 				7D90B13B665DBE23D47E3493 /* FlapRenderer.swift */,
 				7A3048DB15365C86441982CB /* PixelFont.swift */,
+				CCBC42333D6D5525ABEF4031 /* SystemStatsRenderer.swift */,
 				032936A3EEA065086355C804 /* WorldMap.swift */,
 			);
 			path = Render;
@@ -188,7 +197,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2FD8175A431980DF81187A7 /* ATTRIBUTION.md in Resources */,
 				7E2926EBF90AD7ECF4E3ABEA /* Assets.xcassets in Resources */,
+				541F1F352CCE6248B593BA19 /* Credits.rtf in Resources */,
+				C3584522546E6725A1016039 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,10 +211,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8F7A56651624BFABF8A6FBB /* SystemMonitorSettings.swift in Sources */,
-				BA8E4397EF1640F48F9C538D /* SystemStatsRenderer.swift in Sources */,
-				F6658FCA3FA74BAEA2CA858A /* SystemMonitor.swift in Sources */,
-				348FD2E4C300480F8DCF3785 /* MenuBarPanel.swift in Sources */,
 				9A325973482F0B0EAEDF1B9C /* AeroApp.swift in Sources */,
 				03343B299299084C474934CE /* AppModel.swift in Sources */,
 				DFA25AA20CF268BB180C0619 /* Cities.swift in Sources */,
@@ -212,9 +220,13 @@
 				73CFD99D747D0CA3AA3A9D0A /* Controls.swift in Sources */,
 				B359E912FA7C18186B39274F /* FlapRenderer.swift in Sources */,
 				B1E1C88C774447F11C28316A /* MainView.swift in Sources */,
+				86A71970F69BD54CA1285C87 /* MenuBarPanel.swift in Sources */,
 				5E4B6B6A4A3AA04CC4D7CB3A /* PixelFont.swift in Sources */,
 				8788FA198B00AADD5F1FBD64 /* Pomodoro.swift in Sources */,
 				CB857E46DBFE2D52053DB88C /* Settings.swift in Sources */,
+				424E3FC45B85236A73E73AE7 /* SystemMonitor.swift in Sources */,
+				44ED6B34F34A69B6E0B1D986 /* SystemMonitorSettings.swift in Sources */,
+				3D6DB1EB557980A0ADE0DA5A /* SystemStatsRenderer.swift in Sources */,
 				913A3C2E738F3A83E6BD999E /* UsageMonitor.swift in Sources */,
 				F5D6EA681F06BC5BE3D2EFE9 /* WallpaperController.swift in Sources */,
 				55FE63B5BDE259D8426F71FB /* WorldMap.swift in Sources */,
@@ -236,6 +248,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Aero;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Bryl Lim. CC BY 4.0. bryllim.com";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -379,6 +392,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Aero;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 Bryl Lim. CC BY 4.0. bryllim.com";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
