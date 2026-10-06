@@ -17,8 +17,11 @@ struct AeroApp: App {
                 ClockCommands()
                     .environmentObject(model)
             }
-            CommandMenu("Focus") {
+            CommandMenu("Pomodoro") {
                 FocusCommands(pomodoro: model.pomodoro)
+                Divider()
+                PomodoroSettingsButton()
+                    .environmentObject(model)
             }
         }
 
@@ -178,9 +181,11 @@ private struct MenuBarContent: View {
     @Environment(\.openWindow) private var openWindow
 
     var body: some View {
-        ClockCommands()
-        Divider()
+        Text("Pomodoro")
         FocusCommands(pomodoro: model.pomodoro)
+        PomodoroSettingsButton()
+        Divider()
+        ClockCommands()
         if !usage.snapshot.providers.isEmpty {
             Divider()
             ForEach(UsageProvider.allCases) { provider in

@@ -2,10 +2,16 @@ import AppKit
 import Combine
 import ServiceManagement
 
+enum SettingsTab: Hashable {
+    case pomodoro, general, usage
+}
+
 @MainActor
 final class AppModel: ObservableObject {
     static let shared = AppModel()
     static let maxCities = 8
+
+    @Published var settingsTab: SettingsTab = .pomodoro
 
     @Published var settings: AeroSettings {
         didSet {

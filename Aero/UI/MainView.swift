@@ -33,46 +33,45 @@ private struct PreviewPane: View {
     }
 
     var body: some View {
-        VStack(spacing: 20) {
-            Spacer(minLength: 0)
-
-            LiveFace(model: model, pomodoro: model.pomodoro, usage: model.usage)
-                .aspectRatio(screenSize.width / screenSize.height, contentMode: .fit)
-                .background {
-                    // What shows through when the background is see-through.
-                    if let desktopPicture {
-                        Image(nsImage: desktopPicture).resizable().scaledToFill()
-                    } else {
-                        LinearGradient(colors: [Color(white: 0.4), Color(white: 0.15)], startPoint: .topLeading,
-                                       endPoint: .bottomTrailing)
-                    }
-                }
-                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).strokeBorder(.separator))
-                .shadow(color: .black.opacity(0.25), radius: 14, y: 6)
-                .accessibilityLabel("Wallpaper preview")
-
-            HStack(alignment: .top, spacing: 24) {
+        ScrollView {
+            VStack(spacing: 20) {
                 FocusCard(pomodoro: model.pomodoro)
-                Spacer(minLength: 0)
-                VStack(alignment: .trailing, spacing: 8) {
-                    if model.settings.wallpaperEnabled {
-                        Button("Remove from Desktop") { model.settings.wallpaperEnabled = false }
-                    } else {
-                        Button("Set as Desktop Wallpaper") { model.settings.wallpaperEnabled = true }
-                            .buttonStyle(.borderedProminent)
-                            .keyboardShortcut(.defaultAction)
-                    }
-                    Text(model.settings.wallpaperEnabled ? "Aero is showing on your desktop." : "Aero isn’t on your desktop yet.")
-                        .font(.callout)
-                        .foregroundStyle(.secondary)
-                }
-                .controlSize(.large)
-            }
 
-            Spacer(minLength: 0)
+                LiveFace(model: model, pomodoro: model.pomodoro, usage: model.usage)
+                    .aspectRatio(screenSize.width / screenSize.height, contentMode: .fit)
+                    .background {
+                        // What shows through when the background is see-through.
+                        if let desktopPicture {
+                            Image(nsImage: desktopPicture).resizable().scaledToFill()
+                        } else {
+                            LinearGradient(colors: [Color(white: 0.4), Color(white: 0.15)], startPoint: .topLeading,
+                                           endPoint: .bottomTrailing)
+                        }
+                    }
+                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).strokeBorder(.separator))
+                    .shadow(color: .black.opacity(0.25), radius: 14, y: 6)
+                    .accessibilityLabel("Wallpaper preview")
+
+                HStack(alignment: .top, spacing: 24) {
+                    Spacer(minLength: 0)
+                    VStack(alignment: .trailing, spacing: 8) {
+                        if model.settings.wallpaperEnabled {
+                            Button("Remove from Desktop") { model.settings.wallpaperEnabled = false }
+                        } else {
+                            Button("Set as Desktop Wallpaper") { model.settings.wallpaperEnabled = true }
+                                .buttonStyle(.borderedProminent)
+                                .keyboardShortcut(.defaultAction)
+                        }
+                        Text(model.settings.wallpaperEnabled ? "Aero is showing on your desktop." : "Aero isn’t on your desktop yet.")
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
+                    }
+                    .controlSize(.large)
+                }
+            }
+            .padding(32)
         }
-        .padding(32)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(nsColor: .windowBackgroundColor))
         .animation(.default, value: model.settings.wallpaperEnabled)
@@ -84,63 +83,38 @@ private struct PreviewPane: View {
     }
 }
 
-/// The focus timer, with transport controls.
+/// The Pomodoro timer stays above the wallpaper preview.
 struct FocusCard: View {
     @ObservedObject var pomodoro: PomodoroTimer
     @EnvironmentObject private var model: AppModel
 
-    private var state: PomodoroState { pomodoro.state }
-
     var body: some View {
         GroupBox {
-            HStack(spacing: 16) {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(state.phase.title)
-                        .font(.headline)
-                    Group {
-                        if let end = state.endDate {
-                            Text(timerInterval: Date()...end, countsDown: true)
-                        } else {
-                            Text(Self.format(pomodoro.remaining))
-                        }
-                    }
-                    .font(.system(.title, design: .rounded, weight: .medium))
-                    .monospacedDigit()
-                    Text(subtitle)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+            ViewThatFits(in: .horizontal) {
+                HStack(spacing: 24) {
+                    FocusReadout(state: pomodoro.state, remaining: pomodoro.remaining,
+                                 cycleLength: model.settings.pomodoroSessionsPerCycle)
+                    Spacer(minLength: 0)
+                    FocusControls(pomodoro: pomodoro)
                 }
-                .frame(minWidth: 120, alignment: .leading)
-
-                HStack(spacing: 8) {
-                    Button(action: pomodoro.toggle) {
-                        Label(state.isRunning ? "Pause" : "Start", systemImage: state.isRunning ? "pause.fill" : "play.fill")
-                            .frame(minWidth: 64)
-                    }
-                    .buttonStyle(.borderedProminent)
-                    .tint(state.isRunning ? .secondary : .accentColor)
-                    Button(action: pomodoro.skip) {
-                        Label("Skip", systemImage: "forward.end.fill").labelStyle(.iconOnly)
-                    }
-                    .help("Skip to the next phase")
-                    .disabled(!state.isActive)
-                    Button(action: pomodoro.reset) {
-                        Label("Reset", systemImage: "arrow.counterclockwise").labelStyle(.iconOnly)
-                    }
-                    .help("Reset the focus timer")
-                    .disabled(!state.isActive)
+                VStack(alignment: .leading, spacing: 12) {
+                    FocusReadout(state: pomodoro.state, remaining: pomodoro.remaining,
+                                 cycleLength: model.settings.pomodoroSessionsPerCycle)
+                    FocusControls(pomodoro: pomodoro)
                 }
-                .controlSize(.regular)
             }
-            .padding(4)
+            .padding(8)
+            .frame(maxWidth: .infinity, alignment: .leading)
+        } label: {
+            HStack {
+                Label("Pomodoro", systemImage: "timer")
+                    .font(.headline)
+                Spacer()
+                PomodoroSettingsButton()
+                    .font(.callout)
+            }
         }
-        .animation(.default, value: state.isRunning)
-    }
-
-    private var subtitle: String {
-        let cycle = model.settings.pomodoroSessionsPerCycle
-        if !state.isActive { return "\(model.settings.pomodoroFocusMinutes)-minute sessions, \(cycle) per cycle" }
-        return "Session \(state.sessionNumber(of: cycle)) of \(cycle)" + (state.isRunning ? "" : " · Paused")
+        .animation(.default, value: pomodoro.state.isRunning)
     }
 
     static func format(_ interval: TimeInterval) -> String {
@@ -149,7 +123,104 @@ struct FocusCard: View {
     }
 }
 
+private struct FocusReadout: View {
+    let state: PomodoroState
+    let remaining: TimeInterval
+    let cycleLength: Int
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack(alignment: .firstTextBaseline, spacing: 12) {
+                Group {
+                    if let end = state.endDate {
+                        let now = Date()
+                        Text(timerInterval: now...max(now, end), countsDown: true)
+                    } else {
+                        Text(FocusCard.format(remaining))
+                    }
+                }
+                .font(.system(.largeTitle, design: .rounded, weight: .semibold))
+                .monospacedDigit()
+                .fixedSize()
+                Text(state.phase.title)
+                    .font(.headline)
+                    .foregroundStyle(.secondary)
+            }
+            Text("Session \(state.sessionNumber(of: cycleLength)) of \(cycleLength)")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+    }
+}
+
+private struct FocusControls: View {
+    @ObservedObject var pomodoro: PomodoroTimer
+
+    private var actionTitle: LocalizedStringKey {
+        if pomodoro.state.isRunning { return "Pause" }
+        return "Start \(pomodoro.state.phase.title)"
+    }
+
+    var body: some View {
+        HStack(spacing: 8) {
+            Button(action: pomodoro.toggle) {
+                Label(actionTitle, systemImage: pomodoro.state.isRunning ? "pause.fill" : "play.fill")
+            }
+            .buttonStyle(.borderedProminent)
+            Button(action: pomodoro.skip) {
+                Label("Skip", systemImage: "forward.end.fill")
+            }
+            .help("Skip to the next phase")
+            .disabled(!pomodoro.state.isActive)
+            Button(action: pomodoro.reset) {
+                Label("Reset", systemImage: "arrow.counterclockwise")
+            }
+            .help("Reset the Pomodoro timer")
+            .disabled(!pomodoro.state.isActive)
+        }
+        .controlSize(.large)
+        .fixedSize()
+    }
+}
+
+struct PomodoroSettingsButton: View {
+    @EnvironmentObject private var model: AppModel
+    @Environment(\.openSettings) private var openSettings
+
+    var body: some View {
+        Button {
+            model.settingsTab = .pomodoro
+            openSettings()
+        } label: {
+            Label("Pomodoro Settings…", systemImage: "gearshape")
+        }
+        .help("Customize focus sessions, breaks and notifications")
+    }
+}
+
 private struct Inspector: View {
+    @State private var showPomodoro = true
+
+    var body: some View {
+        VStack(spacing: 0) {
+            Picker("Controls", selection: $showPomodoro) {
+                Text("Pomodoro").tag(true)
+                Text("Wallpaper").tag(false)
+            }
+            .pickerStyle(.segmented)
+            .labelsHidden()
+            .padding()
+
+            if showPomodoro {
+                FocusSettings()
+            } else {
+                WallpaperInspector()
+            }
+        }
+    }
+}
+
+private struct WallpaperInspector: View {
     @EnvironmentObject private var model: AppModel
     @State private var confirmingReset = false
 
@@ -328,14 +399,19 @@ private extension DestinationsSection {
 
 /// The Settings window (⌘,): app behavior, as opposed to how the clock looks.
 struct SettingsView: View {
+    @EnvironmentObject private var model: AppModel
+
     var body: some View {
-        TabView {
+        TabView(selection: $model.settingsTab) {
+            FocusSettings()
+                .tabItem { Label("Pomodoro", systemImage: "timer") }
+                .tag(SettingsTab.pomodoro)
             GeneralSettings()
                 .tabItem { Label("General", systemImage: "gearshape") }
-            FocusSettings()
-                .tabItem { Label("Focus", systemImage: "timer") }
+                .tag(SettingsTab.general)
             UsageSettings()
                 .tabItem { Label("AI Usage", systemImage: "chart.bar.xaxis") }
+                .tag(SettingsTab.usage)
         }
         .frame(width: 480)
         .fixedSize(horizontal: false, vertical: true)
@@ -377,13 +453,17 @@ private struct FocusSettings: View {
                         value: $model.settings.pomodoroLongBreakMinutes, in: 5...60, step: 5)
                 Stepper("Sessions per cycle: \(model.settings.pomodoroSessionsPerCycle)",
                         value: $model.settings.pomodoroSessionsPerCycle, in: 2...8)
+            } header: {
+                Text("Session Lengths")
             } footer: {
-                Text("Changes apply from the next phase.")
+                Text("Changes apply from the next phase. An idle timer updates immediately.")
             }
             Section {
                 Toggle("Start the next phase automatically", isOn: $model.settings.pomodoroAutoStart)
                 Toggle("Notify when a phase ends", isOn: $model.settings.pomodoroNotifications)
                 Toggle("Show the timer on the wallpaper", isOn: $model.settings.showPomodoroOnWallpaper)
+            } header: {
+                Text("Timer Behavior")
             }
         }
         .formStyle(.grouped)
