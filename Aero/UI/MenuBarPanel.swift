@@ -30,7 +30,7 @@ struct PomodoroMenuCard: View {
     @ObservedObject var pomodoro: PomodoroTimer
     @EnvironmentObject private var model: AppModel
 
-    private var tint: Color { pomodoro.state.phase == .focus ? .orange : .green }
+    private let tint = Color.primary
 
     var body: some View {
         VStack(spacing: 18) {
@@ -65,16 +65,7 @@ struct PomodoroMenuCard: View {
                 .foregroundStyle(.secondary)
         }
         .padding(20)
-        .background {
-            RoundedRectangle(cornerRadius: 18)
-                .fill(.background)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 18)
-                        .fill(LinearGradient(colors: [tint.opacity(0.14), tint.opacity(0.03)],
-                                             startPoint: .topLeading, endPoint: .bottomTrailing))
-                }
-        }
-        .overlay(RoundedRectangle(cornerRadius: 18).strokeBorder(tint.opacity(0.22)))
+        .background(.primary.opacity(0.045), in: RoundedRectangle(cornerRadius: 18))
     }
 }
 
@@ -144,6 +135,7 @@ private struct PomodoroCycleProgress: View {
 
 private struct PomodoroMenuTransport: View {
     @ObservedObject var pomodoro: PomodoroTimer
+    @Environment(\.colorScheme) private var colorScheme
     let tint: Color
 
     private var actionTitle: LocalizedStringKey {
@@ -161,7 +153,7 @@ private struct PomodoroMenuTransport: View {
                     .font(.callout.weight(.semibold))
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 11)
-                    .foregroundStyle(.black)
+                    .foregroundStyle(colorScheme == .dark ? Color.black : Color.white)
                     .background(tint, in: RoundedRectangle(cornerRadius: 10))
                     .contentShape(RoundedRectangle(cornerRadius: 10))
             }
